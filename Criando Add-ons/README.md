@@ -22,7 +22,7 @@ Agora que temos algumas definições, poderemos partir para a criação do códi
 
 Primeiro, precisamos de um pasta para o nosso projeto, chamarei de exemplo-addon, esta é a primeira exigência, o `package`.
 
-# manifest.json
+## manifest.json
 Na pasta do nosso add-on, devemos ter um arquivo manifest.json, ele contém informações sobre o nosso add-on e guarda quais tipos de opções teremos para ele. O arquivo manifest possui campos obrigatórios, que estão listados no guia.
 Aqui temos o nosso manifest.json de exemplo, contendo campos obrigatórios suficientes para o seu funcionamento:
 
@@ -80,7 +80,7 @@ Aqui temos o nosso manifest.json de exemplo, contendo campos obrigatórios sufic
 
 Nas propriedades, definimos um array de dispostivos, cada dispostivo terá dois campos, um texto e um booleano. Esses campos podem ser recuperados via código posteriormetne.
 
-# Código
+## Código
 
 Agora, criaremos o nosso código, criaremos um arquivo index.js e executaremos o comando `npm init`, com este comando, criaremos o nosso projeto Node.js tendo o index.js como arquivo de inicialização e o package.json que guardará a lista de bibliotecas que serão utilizadas e as baixará automaticamente.
 ![image](https://user-images.githubusercontent.com/56172744/150714088-0c4518da-bb52-4063-9131-7e99dc29ce4e.png)
@@ -102,12 +102,12 @@ Agora que já temos tudo pronto, vamos alterar o nosso index.js para chamar o no
 Por fim, precisamos mover o nosso projeto para a pasta ~/.webthings/addons (você pode criar o projeto diretamente aqui se quiser):
 ![image](https://user-images.githubusercontent.com/56172744/150718201-71393cd1-6d06-44f9-b21b-83489d753d39.png)
 
-# Arquivo SHA SHA256SUMS
+## Arquivo SHA SHA256SUMS
 
 Como exigência do gateway, todo add-on precisa ter um arquivo SHA. Este arquivo contém o valor hash SHA de cada arquivo desta pasta e de pastas descendentes, este arquivo SHA é requisitado pelo gateway para que ele consiga ler os add-nos localmente, executaremos o comando `find . -type f -exec sha256sum {} \; > SHA256SUMS` na pasta do nosso add-on para criarmos o arquivo:
 ![image](https://user-images.githubusercontent.com/56172744/150718288-893a45a7-bdbc-46ee-a511-2c08e9545c10.png)
 
-# Teste
+## Teste
 
 Agora basta inicializar o gateway, quando inicializado, teremos um pequeno "erro" falando que o add-on não está ativado, basta ativar:
 ![image](https://user-images.githubusercontent.com/56172744/150719044-a1865a46-ff0a-4bdb-b48e-2c8ed42e2853.png)
