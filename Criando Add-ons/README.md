@@ -27,55 +27,55 @@ Na pasta do nosso add-on, devemos ter um arquivo manifest.json, ele contém info
 Aqui temos o nosso manifest.json de exemplo, contendo campos obrigatórios suficientes para o seu funcionamento:
 
 `{
-  "author": "Lucas Ferraz",
-  "description": "Exemplo de Add-on.",
-  "gateway_specific_settings": {
-    "webthings": {
-      "exec": "{nodeLoader} {path}",
-      "primary_type": "adapter",
-      "strict_max_version": "*",
-      "strict_min_version": "0.10.0"
-    }
-  },
-  "homepage_url": "https://github.com/danielyujiyamada/CFA-Projetos",
-  "id": "exemplo-addon",
-  "license": "MPL-2.0",
-  "manifest_version": 1,
-  "name": "Exemplo",
-  "options": {
-    "default": {
-      "devices": []
-    },
-    "schema": {
-      "type": "object",
-      "required": [
-        "devices"
-      ],
-      "properties": {
-        "devices": {
-          "description": "Lista de dispostivos",
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": [
-              "address"
-            ],
-            "properties": {
-              "Texto": {
-                "description": "Algum campo de texto",
-                "type": "string"
-              },
-              "Boolean": {
-                "description": "Algum campo booleano",
-                "type": "boolean"
-            }
-          }
-        }
+   "author":"Lucas Ferraz",
+   "description":"Exemplo de Add-on.",
+   "gateway_specific_settings":{
+      "webthings":{
+         "exec":"{nodeLoader} {path}",
+         "primary_type":"adapter",
+         "strict_max_version":"*",
+         "strict_min_version":"0.10.0"
       }
-    }
-  },
-  "short_name": "Exemplo",
-  "version": "0.1"
+   },
+   "homepage_url":"https://github.com/danielyujiyamada/CFA-Projetos",
+   "id":"exemplo-addon",
+   "license":"MPL-2.0",
+   "manifest_version":1,
+   "name":"Exemplo",
+   "options":{
+      "default":{
+         "devices":[
+            
+         ]
+      },
+      "schema":{
+         "type":"object",
+         "required":[
+            "devices"
+         ],
+         "properties":{
+            "devices":{
+               "description":"Lista de dispostivos",
+               "type":"array",
+               "items":{
+                  "type":"object",
+                  "properties":{
+                     "Texto":{
+                        "description":"Algum campo de texto",
+                        "type":"string"
+                     },
+                     "Boolean":{
+                        "description":"Algum campo booleano",
+                        "type":"boolean"
+                     }
+                  }
+               }
+            }
+         }
+      }
+   },
+   "short_name":"Exemplo",
+   "version":"0.1"
 }`
 
 Nas propriedades, definimos um array de dispostivos, cada dispostivo terá dois campos, um texto e um booleano. Esses campos podem ser recuperados via código posteriormetne.
@@ -109,4 +109,7 @@ Como exigência do gateway, todo add-on precisa ter um arquivo SHA. Este arquivo
 
 # Teste
 
-Agora basta inicializar o gateway
+Agora basta inicializar o gateway, quando inicializado, teremos um pequeno "erro" falando que o add-on não está ativado, basta ativar:
+![image](https://user-images.githubusercontent.com/56172744/150719044-a1865a46-ff0a-4bdb-b48e-2c8ed42e2853.png)
+![image](https://user-images.githubusercontent.com/56172744/150719084-d3d684f1-dfa5-4e35-bc6d-9cddb106a1a8.png)
+
