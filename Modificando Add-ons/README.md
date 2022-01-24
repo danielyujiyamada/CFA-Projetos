@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/56172744/150709761-6ad9737c-e14e-4291-88c0-e92e4c8b8ff9.png)
 
-A interface de instalação de add-ons do gateway faz o download dos add-ons diretamente do seu respectivo repositório e os instá-la localmente (você pode acessar o repositório do add-on clicando no seu campo por). Estes add-ons são baixados para a pasta ~/.webthings/addons.
+A interface de instalação de add-ons do gateway faz o download dos add-ons diretamente do seu respectivo repositório e os instala localmente (você pode acessar o repositório do add-on clicando no seu campo por). Estes add-ons são baixados para a pasta ~/.webthings/addons.
 
 ![image](https://user-images.githubusercontent.com/56172744/150709814-01956fba-ca1b-4e03-8af1-16e88ba7c185.png)
 
