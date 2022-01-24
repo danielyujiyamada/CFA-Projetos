@@ -96,8 +96,7 @@ Após o Adapter descobrir o nosso Device, ele irá criar um objeto Device atrav�
 
 Veja que as funções doSomething() e printHelloWorld() não são chamadas pelo construtor, essas funções serão utilizadas pela nossa classe Property. Definimos as propriedades que o nosso Device tem pelo construtor, elas irão aparecer como opções na tela, sempre que forem clicadas, a classe property irá chamar uma função no Device:
 
-![image](https://user-images.githubusercontent.com/56172744/150881932-3693662b-c818-492d-8b35-a85af8ae05dc.png)
-
+![image](https://user-images.githubusercontent.com/56172744/150884490-50e6caaa-ce3d-441a-8a9f-3f4991d6d708.png)
 
 Agora que já temos tudo pronto, vamos alterar o nosso index.js para chamar o nosso Adapter:
 
