@@ -99,12 +99,12 @@ Veja que as funções doSomething() e printHelloWorld() não são chamadas pelo 
 Agora que já temos tudo pronto, vamos alterar o nosso index.js para chamar o nosso Adapter:
 ![image](https://user-images.githubusercontent.com/56172744/150716853-3f2f21bb-5eeb-42ec-b5ee-cd86f70748cc.png)
 
-Por fim, precisamos mover o nosso projeto para a pasta ~/.webthings/addons (você pode criar o projeto diretamente aqui se quiser:
+Por fim, precisamos mover o nosso projeto para a pasta ~/.webthings/addons (você pode criar o projeto diretamente aqui se quiser):
 ![image](https://user-images.githubusercontent.com/56172744/150718201-71393cd1-6d06-44f9-b21b-83489d753d39.png)
 
 # Arquivo SHA SHA256SUMS
 
-Como exigência do gateway, todo add-on precisa ter um arquivo. Este arquivo contém o valor hash SHA de cada arquivo desta pasta e de pastas descendentes, este arquivo SHA é requisitado pelo gateway para que ele consiga ler os add-nos localmente, executaremos o comando `find . -type f -exec sha256sum {} \; > SHA256SUMS` na pasta do nosso add-on para criarmos o arquivo:
+Como exigência do gateway, todo add-on precisa ter um arquivo SHA. Este arquivo contém o valor hash SHA de cada arquivo desta pasta e de pastas descendentes, este arquivo SHA é requisitado pelo gateway para que ele consiga ler os add-nos localmente, executaremos o comando `find . -type f -exec sha256sum {} \; > SHA256SUMS` na pasta do nosso add-on para criarmos o arquivo:
 ![image](https://user-images.githubusercontent.com/56172744/150718288-893a45a7-bdbc-46ee-a511-2c08e9545c10.png)
 
 # Teste
