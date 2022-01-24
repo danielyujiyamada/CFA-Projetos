@@ -40,11 +40,11 @@ Este comando irá criar o arquivo SHA256SUMS. Este arquivo contém o valor hash 
 
 Com a alteração feita e o arquivo SHA256SUMS, basta inicializar o seu gateway e ativar a extensão:
 
-Pedindo para ativar a extensão
+Pedindo para ativar a extensão:
 
 ![image](https://user-images.githubusercontent.com/56172744/150710553-30431ec7-0a93-49ee-ae64-7f072fce605a.png)
 
-Ativando a extensão
+Ativando a extensão:
 
 ![image](https://user-images.githubusercontent.com/56172744/150710585-7a27ce08-5940-4930-8447-ba63eaac9844.png)
 
@@ -52,4 +52,4 @@ Aqui está a nossa alteração, a adição de um log:
 
 ![image](https://user-images.githubusercontent.com/56172744/150710674-5640632c-3c09-4764-a316-6393680d5ce8.png)
 
-##Obs: Para TODA alteração que for feita em algum arquivo da pasta, o comando para a criação do SHA256SUMS deve ser executado novamente.
+## Obs: Para TODA alteração que for feita em algum arquivo da pasta, o comando para a criação do SHA256SUMS deve ser executado novamente.
