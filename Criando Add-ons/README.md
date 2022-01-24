@@ -87,3 +87,26 @@ Agora, criaremos o nosso código, criaremos um arquivo index.js e executaremos o
 
 Separeremos as nossas classes Adapter, Device e Property dentro de uma pasta lib. Começaremos com o Adapter, o adapter é reponsável por encontrar e inicializar os dipostivos. Para isso, temos a nossa função startPairing. Note que a função de pareamento depende 100% do seu projeto, você está tentando encontrar algo por Wi-Fi? Você quer se conectar a uma URL especifica (pode ser mesmo aquela que está definica como parte do objeto no manifest.json)? Quer se conectar a um Arduino? Para cada coisa terá um código diferente, o importante é que você consiga se conectar ao seu dispostivo de alguma forma e criar um objeto do tipo Device com os dados.
 
+Como o nosso exemplo não possui nenhum tipo de dispostivo em especifico, vou pular a parte do descobrimento e inicializar um novo dispositivo manualmente. É necessário herdar a classe Adapter da biblioteca do gateway (ela pode ser acessada com o require) e chamar o seu construtor super, passando o id do nosso manifesto (acessado via require).
+![image](https://user-images.githubusercontent.com/56172744/150715008-f074292a-02d5-4074-9d28-da083e4ab7bf.png)
+
+Após o Adapter descobrir o nosso Device, ele irá inicializar o seu construtor, armazenando dados importantes em variáveis, inicializando algumas funções. Como no Adapter, tudo depende do seu projeto. Para nós, apenas guardar o nome e o adapter que o criou já basta!
+![image](https://user-images.githubusercontent.com/56172744/150716652-fb9bf448-a54c-4f63-b4b8-8a6d437869e6.png)
+
+Veja que as funções doSomething() e printHelloWorld() não são chamadas pelo construtor, essas funções serão utilizadas pela nossa classe Property. Definimos as propriedades que o nosso Device tem pelo construtor, elas irão aparecer como opções na tela, sempre que forem clicadas, a classe property irá chamar uma função no Device:
+![image](https://user-images.githubusercontent.com/56172744/150716695-2ef9c4ed-980b-4be9-a784-acb4ca9bfa86.png)
+
+Agora que já temos tudo pronto, vamos alterar o nosso index.js para chamar o nosso Adapter:
+![image](https://user-images.githubusercontent.com/56172744/150716853-3f2f21bb-5eeb-42ec-b5ee-cd86f70748cc.png)
+
+Por fim, precisamos mover o nosso projeto para a pasta ~/.webthings/addons (você pode criar o projeto diretamente aqui se quiser:
+![image](https://user-images.githubusercontent.com/56172744/150718201-71393cd1-6d06-44f9-b21b-83489d753d39.png)
+
+# Arquivo SHA SHA256SUMS
+
+Como exigência do gateway, todo add-on precisa ter um arquivo. Este arquivo contém o valor hash SHA de cada arquivo desta pasta e de pastas descendentes, este arquivo SHA é requisitado pelo gateway para que ele consiga ler os add-nos localmente, executaremos o comando `find . -type f -exec sha256sum {} \; > SHA256SUMS` na pasta do nosso add-on para criarmos o arquivo:
+![image](https://user-images.githubusercontent.com/56172744/150718288-893a45a7-bdbc-46ee-a511-2c08e9545c10.png)
+
+# Teste
+
+Agora basta inicializar o gateway
