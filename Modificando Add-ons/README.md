@@ -1,4 +1,4 @@
-#Como modificar o código de add-ons do gateway
+# Como modificar o código de add-ons do gateway
 
 ![image](https://user-images.githubusercontent.com/56172744/150709236-db1e8819-2243-4f60-83c8-8bb970eec712.png)
 
@@ -6,7 +6,10 @@ A interface de instalação de add-ons do gateway faz o download dos add-ons dir
 
 ![image](https://user-images.githubusercontent.com/56172744/150709258-4503721c-4a0b-4f90-b3e6-abd9ebadccbd.png)
 
-Aqui você conseguirá ver o código fonte que foi baixado para o seu computador. Caso você deseje alterar alguma parte do código, seja mudando a função do add-on, inserindo algum tipo de log etc. Não será possível, pois o gateway irá apagar a pasta em sua inicialização caso o código tenha sido alterado. Com a pasta apagada, seria necessário fazer o download do add-on pela interface do gateway novamente, contudo, você receberia o código sem as suas alterações novamente.
+Aqui você conseguirá ver o código fonte que foi baixado para o seu computador. Caso você deseje alterar alguma parte do código, seja mudando a função do add-on, inserindo algum tipo de log etc. Não será possível, pois o gateway irá apagar a pasta em sua inicialização caso o código tenha sido alterado. 
+
+Com a pasta apagada, seria necessário fazer o download do add-on pela interface do gateway novamente, contudo, você receberia o código sem as suas alterações novamente.
+
 Para alterar um add-on já existente, devemos fazer um processo um pouco diferente. Primeiro, deve-se entrar no repositório do add-on desejado e fazer download dos arquivos:
 
 ![image](https://user-images.githubusercontent.com/56172744/150709265-23ce6cd1-bf35-480d-b786-c2a65a8eb7b9.png)
