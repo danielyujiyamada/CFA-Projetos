@@ -23,7 +23,7 @@ Agora que temos algumas definições, poderemos partir para a criação do códi
 Primeiro, precisamos de um pasta para o nosso projeto, chamarei de exemplo-addon, esta é a primeira exigência, o `package`.
 
 ## manifest.json
-Na pasta do nosso add-on, devemos ter um arquivo manifest.json, ele contém informações sobre o nosso add-on e guarda quais tipos de opções teremos para ele. O arquivo manifest possui campos obrigatórios, que estão listados no guia.
+Na pasta do nosso add-on, devemos ter um arquivo chamado manifest.json, ele contém informações sobre o nosso add-on e guarda quais tipos de opções teremos para ele. O arquivo manifest possui campos obrigatórios, que estão listados no guia.
 Aqui temos o nosso manifest.json de exemplo, contendo campos obrigatórios suficientes para o seu funcionamento:
 
 `{
@@ -76,7 +76,7 @@ Aqui temos o nosso manifest.json de exemplo, contendo campos obrigatórios sufic
    "version":"0.1"
 }`
 
-Nas propriedades, definimos um array de dispostivos, cada dispostivo terá dois campos, um texto e um booleano. Esses campos podem ser recuperados via código posteriormetne.
+Nas propriedades, definimos um array de dispostivos, cada dispostivo terá dois campos, um texto e um booleano. Os valores inseridos nesses campos podem ser recuperados via código posteriormetne.
 
 ## Código
 
