@@ -14,7 +14,7 @@ Para alterar um add-on já existente, devemos fazer um processo um pouco diferen
 
 ![image](https://user-images.githubusercontent.com/56172744/150709885-896d1658-5287-4ebd-92a9-8f5b0d57df09.png)
 
-Tendo os arquivos em mão, adicione a pasta baixado no caminho ~/.webthings/add-ons
+Tendo os arquivos em mão, adicione a pasta baixada no caminho ~/.webthings/add-ons
 
 ![image](https://user-images.githubusercontent.com/56172744/150709944-119822d0-abe1-4d33-ba6d-ff7c59a2555c.png)
 
