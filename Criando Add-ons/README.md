@@ -44,9 +44,7 @@ Aqui temos o nosso manifest.json de exemplo, contendo campos obrigatórios sufic
    "name":"Exemplo",
    "options":{
       "default":{
-         "devices":[
-            
-         ]
+         "devices":[]
       },
       "schema":{
          "type":"object",
