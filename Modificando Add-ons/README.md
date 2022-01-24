@@ -8,7 +8,7 @@ A interface de instalação de add-ons do gateway faz o download dos add-ons dir
 
 Aqui você conseguirá ver o código fonte que foi baixado para o seu computador. Caso você deseje alterar alguma parte do código, seja mudando a função do add-on, inserindo algum tipo de log etc. Não será possível, pois o gateway irá apagar a pasta em sua inicialização caso o código tenha sido alterado. 
 
-Com a pasta apagada, seria necessário fazer o download do add-on pela interface do gateway novamente, contudo, você receberia o código sem as suas alterações novamente.
+Com a pasta apagada, seria necessário fazer o download do add-on pela interface do gateway novamente, contudo, você receberia o código sem as suas alterações, e se fosse alterar novamente, o gateway irá apagar novamente, criando um ciclo sem fim.
 
 Para alterar um add-on já existente, devemos fazer um processo um pouco diferente. Primeiro, deve-se entrar no repositório do add-on desejado e fazer download dos arquivos:
 
