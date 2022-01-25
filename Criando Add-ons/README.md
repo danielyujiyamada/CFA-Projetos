@@ -118,7 +118,7 @@ Como exigência do gateway, todo add-on precisa ter um arquivo SHA. Este arquivo
 
 ## Teste
 
-Agora basta inicializar o gateway, quando inicializado, teremos um pequeno "erro" falando que o add-on não está ativado, basta ativar:
+Agora basta inicializar o gateway. Durante essa primeira inicialização, nós nos depararemos com um pequeno "erro" falando que o add-on não está ativado, basta ativa-lo no painel de extensões:
 
 ![image](https://user-images.githubusercontent.com/56172744/150719044-a1865a46-ff0a-4bdb-b48e-2c8ed42e2853.png)
 ![image](https://user-images.githubusercontent.com/56172744/150719084-d3d684f1-dfa5-4e35-bc6d-9cddb106a1a8.png)
@@ -142,7 +142,7 @@ Quando o boolean printHelloWorld é marcado como true, a função printHelloWorl
 
 ![image](https://user-images.githubusercontent.com/56172744/150885641-1d379f1f-fa90-4b07-938b-ee9f4ef79033.png)
 
-Quando algo é inserido no campo doSomething, a função doSomething é chamada:
+Quando algo é inserido no campo doSomething, a função doSomething é chamada, ela também printa algo no console:
 
 ![image](https://user-images.githubusercontent.com/56172744/150885710-9aebab7f-1a26-4706-a0e9-14024535edf2.png)
 
