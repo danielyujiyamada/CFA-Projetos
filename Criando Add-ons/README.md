@@ -90,11 +90,11 @@ Como o nosso exemplo não possui nenhum tipo de dispostivo em especifico, vou pu
 
 ![image](https://user-images.githubusercontent.com/56172744/150715008-f074292a-02d5-4074-9d28-da083e4ab7bf.png)
 
-Após o Adapter descobrir o nosso Device, ele irá criar um objeto Device através do seu construtor. O nosso Device irá apenas guardar um nome e o adapter que o criou:
+Após o Adapter descobrir o nosso Device, ele irá criar um objeto Device através do seu construtor. O nosso Device irá apenas guardar um nome e o adapter que o criou.
 
-![image](https://user-images.githubusercontent.com/56172744/150716652-fb9bf448-a54c-4f63-b4b8-8a6d437869e6.png)
+![image](https://user-images.githubusercontent.com/56172744/150885398-c4c331ff-a8c0-45eb-b2cd-6b2730780d9e.png)
 
-Veja que as funções doSomething() e printHelloWorld() não são chamadas pelo construtor, essas funções serão utilizadas pela nossa classe Property. Definimos as propriedades que o nosso Device tem pelo construtor, elas irão aparecer como opções na tela, sempre que forem clicadas, a classe property irá chamar uma função no Device:
+Veja que as funções doSomething() e printHelloWorld() não são chamadas pelo construtor, essas funções serão utilizadas pela nossa classe Property. Veja que definimos as propriedades que o nosso Device tem pelo construtor, elas irão aparecer como opções na tela, sempre que forem clicadas, a classe property irá chamar uma função no Device. No caso, temos duas propreidades, uma booleana e outra integer (o tipo de propriedade é definido no campo type, aqui temos uma [lista de todas as propriedades existentes](https://iot.mozilla.org/schemas/#properties)):
 
 ![image](https://user-images.githubusercontent.com/56172744/150884490-50e6caaa-ce3d-441a-8a9f-3f4991d6d708.png)
 
@@ -128,3 +128,20 @@ Vamos adicionar o dispositivo configurado criado ao nosso gateway:
 
 Note que, mesmo adicionando duas configurações diferentes na tela de configurar, apenas um dispositivo apareceu, isso acontece porque a nossa classe Adapter cria apenas um dispositivo com um código estatico, o correto seria acessar o banco de dados (classe Database do pacote gateway-addon) e criar um Device para cada configuração.
 
+![image](https://user-images.githubusercontent.com/56172744/150885190-313e106a-7574-4869-8db3-7faf291de8f3.png)
+
+Aqui está o nosso dispositivo, como definimos 2 propriedades nele na classe ExemploDevice (um boolean e um integer), elas apareceram aqui como objetos clicaveis/inseriveis:
+
+![image](https://user-images.githubusercontent.com/56172744/150885527-77cc0dc4-632c-44d2-baec-db8a011a05d2.png)
+
+Quando o boolean printHelloWorld é marcado como true, a função printHelloWorld é chamada, printando o que foi definido no console:
+
+![image](https://user-images.githubusercontent.com/56172744/150885641-1d379f1f-fa90-4b07-938b-ee9f4ef79033.png)
+
+Quando algo é inserido no campo doSomething, a função doSomething é chamada:
+
+![image](https://user-images.githubusercontent.com/56172744/150885710-9aebab7f-1a26-4706-a0e9-14024535edf2.png)
+
+## Conclusão
+
+Este é o nosso add-on de exemplo, ele é capaz de encontrar dispostivos, cria-los e gerenciar suas propriedades. Claro que ele é bastante simples, mas mostra 3 tipos principais de tipos de add-on.
