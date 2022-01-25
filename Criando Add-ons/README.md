@@ -18,12 +18,12 @@ Estas são apenas descrições resumidas, existem outros tipos de add-ons que po
 
 ## Criando um add-on com Adapter, Device e Property (Node.js)
 
-Agora que temos algumas definições, poderemos partir para a criação do código. Vamos criar um add-on bem básico, que na verdade, não faz nada. Antes de iniciar, o gateway necessita de algumas definições (arquivos .json) para o seu projeto. Estas exigências podem ser encontradas neste [guia](https://github.com/WebThingsIO/addon-list/blob/master/manifest.md).
+Agora que possuimos algum conhecimento, podemos partir para a criação do código. Vamos criar um add-on bem básico, que na verdade, não faz nada. Antes de iniciar o processo, o gateway necessita de algumas definições (arquivos de configuração) para o seu projeto. Estas exigências podem ser encontradas neste [guia](https://github.com/WebThingsIO/addon-list/blob/master/manifest.md).
 
 Primeiro, precisamos de um pasta para o nosso projeto, chamarei de exemplo-addon, esta é a primeira exigência, o `package`.
 
 ## manifest.json
-Na pasta do nosso add-on, devemos ter um arquivo chamado manifest.json, ele contém informações sobre o nosso add-on e guarda quais tipos de opções teremos para ele. O arquivo manifest possui campos obrigatórios, que estão listados no guia.
+Na pasta do nosso add-on, devemos ter um arquivo chamado manifest.json, ele contém informações sobre o nosso add-on (como criador, versão, repositório e etc) e guarda quais tipos de opções teremos para ele. O arquivo manifest possui campos obrigatórios, que estão listados no guia.
 Aqui temos o nosso manifest.json de exemplo, contendo campos obrigatórios suficientes para o seu funcionamento:
 
 `{
@@ -80,21 +80,21 @@ Nas propriedades, definimos um array de dispostivos, cada dispostivo terá dois 
 
 ## Código
 
-Agora, criaremos o nosso código, criaremos um arquivo index.js e executaremos o comando `npm init`, com este comando, criaremos o nosso projeto Node.js tendo o index.js como arquivo de inicialização e o package.json que guardará a lista de bibliotecas que serão utilizadas e as baixará automaticamente.
+Agora, programaremos o nosso código, criaremos um arquivo index.js e executaremos o comando `npm init`, com este comando, inicializaremos o nosso projeto Node.js tendo o index.js como arquivo de inicialização e o package.json como um arquivo que guardará a lista de bibliotecas que serão utilizadas e as baixará automaticamente.
 
 ![image](https://user-images.githubusercontent.com/56172744/150714088-0c4518da-bb52-4063-9131-7e99dc29ce4e.png)
 
-Teremos 3 classes, separadas em classes Adapter, Device e Property, guardadas em dentro de uma pasta chamada lib. Começaremos com o Adapter, o adapter é reponsável por encontrar e inicializar os dipostivos. Para isso, temos a nossa função startPairing. Note que a função de pareamento depende 100% do seu projeto, você está tentando encontrar algo por Wi-Fi? Você quer se conectar a uma URL especifica (pode aquele campo de texto que está definido como parte do dispositivo no manifest.json)? Quer se conectar a um Arduino? Cada situação terá um código diferente, o importante é que você consiga se conectar ao seu dispostivo de alguma forma e criar um objeto do tipo Device com os dados.
+Teremos 3 arquivos principais, separadas em classes ExemploAdapter, ExemploDevice e ExemploProperty, guardadas em dentro de uma pasta chamada lib. Começaremos com o Adapter, o adapter é reponsável por encontrar e inicializar os dipostivos. Para isso, temos a nossa função startPairing. Note que a função de pareamento depende 100% do seu projeto, você está tentando encontrar algo por Wi-Fi? Você quer se conectar a uma URL especifica (utilizando o campo de texto que está definido como parte do dispositivo no manifest.json, por exemplo)? Quer se conectar a um Arduino? Cada situação terá um código diferente, o importante é que você consiga se conectar ao seu dispostivo de alguma forma e criar um objeto do tipo Device com os dados.
 
 Como o nosso exemplo não possui nenhum tipo de dispostivo em especifico, vou pular a parte do descobrimento e inicializar um novo dispositivo manualmente. É necessário herdar a classe Adapter da biblioteca do gateway (ela pode ser acessada com o require) e chamar o seu construtor super, passando o id do nosso manifesto (acessado via require).
 
 ![image](https://user-images.githubusercontent.com/56172744/150715008-f074292a-02d5-4074-9d28-da083e4ab7bf.png)
 
-Após o Adapter descobrir o nosso Device, ele irá criar um objeto Device através do seu construtor. O nosso Device irá apenas guardar um nome e o adapter que o criou.
+Após o Adapter descobrir o nosso dispositivo, ele irá criar um objeto ExemploDevice através do seu construtor. O nosso ExemploDevice irá apenas guardar um nome e o adapter que o criou.
 
 ![image](https://user-images.githubusercontent.com/56172744/150885398-c4c331ff-a8c0-45eb-b2cd-6b2730780d9e.png)
 
-Veja que as funções doSomething() e printHelloWorld() não são chamadas pelo construtor, essas funções serão utilizadas pela nossa classe Property. Veja que definimos as propriedades que o nosso Device tem pelo construtor, elas irão aparecer como opções na tela, sempre que forem clicadas, a classe property irá chamar uma função no Device. No caso, temos duas propreidades, uma booleana e outra integer (o tipo de propriedade é definido no campo type, aqui temos uma [lista de todas as propriedades existentes](https://iot.mozilla.org/schemas/#properties)):
+Veja que as funções doSomething() e printHelloWorld() não são chamadas pelo construtor, essas funções serão utilizadas pela nossa classe ExemploProperty. Observe que definimos as propriedades que o nosso Device tem pelo construtor, elas irão aparecer como opções na tela. Sempre que forem clicadas, a classe Property irá chamar uma função no Device. No caso, temos duas propreidades, uma booleana e outra integer (o tipo de propriedade é definido no campo type, aqui temos uma [lista de todas as propriedades existentes](https://iot.mozilla.org/schemas/#properties)):
 
 ![image](https://user-images.githubusercontent.com/56172744/150884490-50e6caaa-ce3d-441a-8a9f-3f4991d6d708.png)
 
@@ -112,6 +112,8 @@ Como exigência do gateway, todo add-on precisa ter um arquivo SHA. Este arquivo
 
 ![image](https://user-images.githubusercontent.com/56172744/150718288-893a45a7-bdbc-46ee-a511-2c08e9545c10.png)
 
+#### Obs: O arquivo SHA256SUMS deve ser refeito sempre que houver uma alteração em qualquer arquivo desta pasta.
+
 ## Teste
 
 Agora basta inicializar o gateway, quando inicializado, teremos um pequeno "erro" falando que o add-on não está ativado, basta ativar:
@@ -119,18 +121,18 @@ Agora basta inicializar o gateway, quando inicializado, teremos um pequeno "erro
 ![image](https://user-images.githubusercontent.com/56172744/150719044-a1865a46-ff0a-4bdb-b48e-2c8ed42e2853.png)
 ![image](https://user-images.githubusercontent.com/56172744/150719084-d3d684f1-dfa5-4e35-bc6d-9cddb106a1a8.png)
 
-Clicando em "Configurar" podemos ver o efeito do nosso manifest.json, o nosso add-on permite a criação de múltiplos dispositivos, cada um com um campo de texto e um campo booleano:
+Ao clicar em "Configurar" poderemos ver o efeito do nosso manifest.json, o nosso add-on permite a criação de múltiplos dispositivos, cada um com um campo de texto e um campo booleano (como esta no arquivo):
 
 ![image](https://user-images.githubusercontent.com/56172744/150882079-20109611-8336-462c-9cb9-93719c68cbe7.png)
 
-Vamos adicionar o dispositivo configurado criado ao nosso gateway:
+Vamos adicionar o dispositivo configurado ao nosso gateway:
 ![image](https://user-images.githubusercontent.com/56172744/150882259-72b507f0-e420-4f42-91b6-5cf3bf9f0783.png)
 
-Note que, mesmo adicionando duas configurações diferentes na tela de configurar, apenas um dispositivo apareceu, isso acontece porque a nossa classe Adapter cria apenas um dispositivo com um código estatico, o correto seria acessar o banco de dados (classe Database do pacote gateway-addon) e criar um Device para cada configuração.
+Note que, mesmo adicionando duas configurações diferentes na tela de configurar, apenas um dispositivo apareceu, isso acontece porque a nossa classe Adapter cria apenas um dispositivo com um código estático, o correto seria acessar o banco de dados (classe Database do pacote gateway-addon) e criar um Device para cada configuração.
 
 ![image](https://user-images.githubusercontent.com/56172744/150885190-313e106a-7574-4869-8db3-7faf291de8f3.png)
 
-Aqui está o nosso dispositivo, como definimos 2 propriedades nele na classe ExemploDevice (um boolean e um integer), elas apareceram aqui como objetos clicaveis/inseriveis:
+Aqui está o nosso dispositivo, como definimos 2 propriedades para ele na classe ExemploDevice (um boolean e um integer), elas apareceram aqui como objetos clicaveis/inseriveis:
 
 ![image](https://user-images.githubusercontent.com/56172744/150885527-77cc0dc4-632c-44d2-baec-db8a011a05d2.png)
 
@@ -144,4 +146,4 @@ Quando algo é inserido no campo doSomething, a função doSomething é chamada:
 
 ## Conclusão
 
-Este é o nosso add-on de exemplo, ele é capaz de encontrar dispostivos, cria-los e gerenciar suas propriedades. Claro que ele é bastante simples, mas mostra 3 tipos principais de tipos de add-on.
+Este é o nosso add-on de exemplo, ele é capaz de encontrar dispostivos, cria-los e gerenciar suas propriedades. Claro que ele é bastante simples, mas mostra 3 tipos principais de add-ons.
