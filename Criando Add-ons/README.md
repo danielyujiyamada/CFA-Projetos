@@ -1,6 +1,6 @@
 # Criando Add-ons para o gateway WebThings
 
-O gateway WebThings possui uma comunidade ativa, esta que possui uma grande gama de desenvolvedores, que criam diversas aplicações para a manipulação de dispositivos inteligentes pelo gateway.
+O gateway WebThings possui uma comunidade ativa, onde uma grande gama de desenvolvedores participam, criando diversas aplicações para a manipulação de dispositivos inteligentes pelo gateway.
 
 A Mozilla disponibilizou arquivos contendo informações sobre os serviços do gateway para desenvolvedores, como APIs, Schemas, Hardware suportado, guias para a criação de Add-ons e etc. Tudo pode ser encontrado nesse [link](https://github.com/WebThingsIO/wiki/wiki).
 
