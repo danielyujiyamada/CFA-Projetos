@@ -80,7 +80,7 @@ Nas propriedades, definimos um array de dispostivos, cada dispostivo terá dois 
 
 ## Código
 
-Agora, programaremos o nosso código, criaremos um arquivo index.js e executaremos o comando `npm init`, com este comando, inicializaremos o nosso projeto Node.js tendo o index.js como arquivo de inicialização e o package.json como um arquivo que guardará o nome das bibliotecas que serão utilizadas como uma lista, as baixando automaticamente sempre que o comando `npm install` for executado.
+Agora, programaremos o nosso código, criaremos um arquivo index.js e executaremos o comando `npm init`, com este comando, inicializaremos o nosso projeto Node.js tendo o index.js como código de inicialização e o package.json como um arquivo que guardará o nome das bibliotecas que serão utilizadas, as baixando automaticamente sempre que o comando `npm install` for executado.
 
 ![image](https://user-images.githubusercontent.com/56172744/150714088-0c4518da-bb52-4063-9131-7e99dc29ce4e.png)
 
