@@ -84,19 +84,21 @@ Agora, programaremos o nosso código, criaremos um arquivo index.js e executarem
 
 ![image](https://user-images.githubusercontent.com/56172744/150714088-0c4518da-bb52-4063-9131-7e99dc29ce4e.png)
 
-Teremos 3 arquivos principais, separadas em classes ExemploAdapter, ExemploDevice e ExemploProperty, guardadas em dentro de uma pasta chamada lib. Começaremos com o Adapter, o adapter é reponsável por encontrar e inicializar os dipostivos. Para isso, temos a nossa função startPairing. Note que a função de pareamento depende 100% do seu projeto, você está tentando encontrar algo por Wi-Fi? Você quer se conectar a uma URL especifica (utilizando o campo de texto que está definido como parte do dispositivo no manifest.json, por exemplo)? Quer se conectar a um Arduino? Cada situação terá um código diferente, o importante é que você consiga se conectar ao seu dispostivo de alguma forma e criar um objeto do tipo Device com os dados.
+Teremos 3 arquivos principais, separados em classes, essas que são ExemploAdapter, ExemploDevice e ExemploProperty, guardadas dentro de uma pasta chamada lib. Começaremos com o Adapter, o adapter é reponsável por encontrar e inicializar os dipostivos. Para isso, temos a nossa função startPairing. Note que a função de pareamento depende 100% do seu projeto, você está tentando encontrar algo por Wi-Fi? Você quer se conectar a uma URL especifica (utilizando o campo de texto que está definido como parte do dispositivo no manifest.json, por exemplo)? Quer se conectar a um Arduino? Cada situação terá um código diferente, o importante é que você consiga se conectar ao seu dispostivo de alguma forma e criar um objeto do tipo Device com os dados.
 
-Como o nosso exemplo não possui nenhum tipo de dispostivo em especifico, vou pular a parte do descobrimento e inicializar um novo dispositivo manualmente. É necessário herdar a classe Adapter da biblioteca do gateway (ela pode ser acessada com o require) e chamar o seu construtor super, passando o id do nosso manifesto (acessado via require).
+Como o nosso exemplo não possui nenhum tipo de dispostivo em especifico, vou pular a parte do descobrimento e inicializar um novo dispositivo manualmente. É necessário herdar a classe Adapter da biblioteca do gateway (ela pode ser acessada com o require) e chamar o seu construtor com o comando super, passando o id do nosso manifesto (acessado via require).
 
 ![image](https://user-images.githubusercontent.com/56172744/150715008-f074292a-02d5-4074-9d28-da083e4ab7bf.png)
 
-Após o Adapter descobrir o nosso dispositivo, ele irá criar um objeto ExemploDevice através do seu construtor. O nosso ExemploDevice irá apenas guardar um nome e o adapter que o criou.
+Após o Adapter descobrir o nosso dispositivo, ele irá criar um objeto ExemploDevice. O nosso ExemploDevice terá duas variáveis, um nome e uma variável para guardar o adapter que o criou.
 
 ![image](https://user-images.githubusercontent.com/56172744/150885398-c4c331ff-a8c0-45eb-b2cd-6b2730780d9e.png)
 
-Veja que as funções doSomething() e printHelloWorld() não são chamadas pelo construtor, essas funções serão utilizadas pela nossa classe ExemploProperty. Observe que definimos as propriedades que o nosso Device tem pelo construtor, elas irão aparecer como opções na tela. Sempre que forem clicadas, a classe Property irá chamar uma função no Device. No caso, temos duas propreidades, uma booleana e outra integer (o tipo de propriedade é definido no campo type, aqui temos uma [lista de todas as propriedades existentes](https://iot.mozilla.org/schemas/#properties)):
+Veja que temos duas funções, doSomething() e printHelloWorld(), elas não são chamadas pelo construtor, essas funções serão utilizadas pela nossa classe ExemploProperty. No construtor do nosso Device foram definidas duas propriedades, elas irão aparecer como botões na tela do dispositivo (Thing) no gateway. Sempre que esses botões forem clicados, a classe Property irá chamar uma função correspondente no Device. No caso, temos duas propreidades, uma booleana e outra integer (o tipo de propriedade é definido no campo type, aqui temos uma [lista de todas as propriedades existentes](https://iot.mozilla.org/schemas/#properties)):
 
 ![image](https://user-images.githubusercontent.com/56172744/150884490-50e6caaa-ce3d-441a-8a9f-3f4991d6d708.png)
+
+Ao se clicar em um dos botões a função switchValue é chamada, nela teremos o nome do botão que foi clicado e o valor que foi passado nesse botão, cabe a você decidir o que fazer com esse acionamento, neste exemplo, cada propreidade possui uma função de nome correspondente na classe ExemploDevice, quando eles forem clicados, essa função será chamada.
 
 Agora que já temos tudo pronto, vamos alterar o nosso index.js para chamar o nosso Adapter:
 
