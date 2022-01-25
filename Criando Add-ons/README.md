@@ -8,7 +8,7 @@ Os Add-ons podem ser criados em qualquer liguagem, contudo, o gateway disponibil
 
 Como descrito na página [HOWTO: Create an add on](https://github.com/WebThingsIO/wiki/wiki/HOWTO%3A-Create-an-add-on) (recomendo a leitura), os add-ons são dividos em principais categorias, algumas são:
 
-Adapter: Um objeto que serve para gerenciar a comunicação com um dispositivo fisico, o conectando-o ao gateway, um adaptador.
+Adapter: Um objeto que serve para gerenciar a comunicação entre o gateway e dispostivos fisicos, conectando-os ao gateway, um adaptador.
 
 Device: O dispostivo, a representação do dispostivo de hardrware ou virtual via código. Pode-se dizer que é a classe que representará o seu objeto, contendo variáveis, funções e etc.
 
