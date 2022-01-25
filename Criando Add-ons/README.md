@@ -12,7 +12,7 @@ Adapter: Um objeto que serve para gerenciar a comunicação entre o gateway e di
 
 Device: O dispostivo, a representação do dispostivo de hardrware ou virtual via código. Pode-se dizer que é a classe que representará o seu objeto, contendo variáveis, funções e etc.
 
-Property: As propriedades do dispostivo, esta representa as opções que o seu dispostivo terá e que serão apresentadas na tela do gateway.
+Property: As propriedades do dispostivo, esta representa as opções que o seu dispostivo apresentará na interface de dispositivo do gateway.
 
 Estas são apenas descrições resumidas, existem outros tipos de add-ons que podem ser encontrados na página HOWTO.
 
