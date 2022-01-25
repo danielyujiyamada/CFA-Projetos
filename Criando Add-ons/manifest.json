@@ -1,0 +1,49 @@
+{
+   "author":"Lucas Ferraz",
+   "description":"Exemplo de Add-on.",
+   "gateway_specific_settings":{
+      "webthings":{
+         "exec":"{nodeLoader} {path}",
+         "primary_type":"adapter",
+         "strict_max_version":"*",
+         "strict_min_version":"0.10.0"
+      }
+   },
+   "homepage_url":"https://github.com/danielyujiyamada/CFA-Projetos",
+   "id":"exemplo-addon",
+   "license":"MPL-2.0",
+   "manifest_version":1,
+   "name":"Exemplo",
+   "options":{
+      "default":{
+         "devices":[]
+      },
+      "schema":{
+         "type":"object",
+         "required":[
+            "devices"
+         ],
+         "properties":{
+            "devices":{
+               "description":"Lista de dispostivos",
+               "type":"array",
+               "items":{
+                  "type":"object",
+                  "properties":{
+                     "Texto":{
+                        "description":"Algum campo de texto",
+                        "type":"string"
+                     },
+                     "Boolean":{
+                        "description":"Algum campo booleano",
+                        "type":"boolean"
+                     }
+                  }
+               }
+            }
+         }
+      }
+   },
+   "short_name":"Exemplo",
+   "version":"0.1"
+}
