@@ -23,7 +23,7 @@ Agora que possuimos algum conhecimento, podemos partir para a criação do códi
 Primeiro, precisamos de um pasta para o nosso projeto, chamarei de exemplo-addon, esta é a primeira exigência, o `package`.
 
 ## manifest.json
-Na pasta do nosso add-on, devemos ter um arquivo chamado manifest.json, ele contém informações sobre o nosso add-on (como criador, versão, repositório e etc) e guarda quais tipos de opções teremos para ele. O arquivo manifest possui campos obrigatórios, que estão listados no guia.
+Na pasta do nosso add-on, devemos ter um arquivo chamado manifest.json, ele contém informações sobre o nosso add-on (criador, versão, repositório e etc) e guarda quais tipos de opções teremos para ele. O arquivo manifest possui campos obrigatórios, que estão listados no guia.
 Aqui temos o nosso manifest.json de exemplo, contendo campos obrigatórios suficientes para o seu funcionamento:
 
 `{
