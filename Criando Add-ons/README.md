@@ -76,7 +76,7 @@ Aqui temos o nosso manifest.json de exemplo, contendo campos obrigatórios sufic
    "version":"0.1"
 }`
 
-Nas propriedades, definimos um array de dispostivos, cada dispostivo terá dois campos, um texto e um booleano. Os valores inseridos nesses campos podem ser recuperados via código posteriormetne.
+Nas propriedades, definimos um array de dispostivos, cada dispostivo terá dois campos, um textual e um booleano. Os valores inseridos nesses campos podem ser recuperados via código posteriormente.
 
 ## Código
 
