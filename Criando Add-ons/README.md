@@ -98,7 +98,7 @@ Veja que temos duas funções, doSomething() e printHelloWorld(), elas não são
 
 ![image](https://user-images.githubusercontent.com/56172744/150884490-50e6caaa-ce3d-441a-8a9f-3f4991d6d708.png)
 
-Ao se clicar em um dos botões a função switchValue é chamada, nela teremos o nome do botão que foi clicado e o valor que foi passado nesse botão, cabe a você decidir o que fazer com esse acionamento, neste exemplo, cada propreidade possui uma função de nome correspondente na classe ExemploDevice, quando eles forem clicados, essa função será chamada.
+Ao se clicar em um dos botões a função setValue é chamada, nela teremos o nome do botão que foi clicado e o valor que foi passado nesse botão, cabe a você decidir o que fazer com esse acionamento, neste exemplo, cada propreidade (botão) possui uma função de nome correspondente na classe ExemploDevice, quando eles forem clicados, essa função será chamada.
 
 Agora que já temos tudo pronto, vamos alterar o nosso index.js para chamar o nosso Adapter:
 
