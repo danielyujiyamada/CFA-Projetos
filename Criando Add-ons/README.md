@@ -132,7 +132,7 @@ Note que, mesmo adicionando duas configurações diferentes na tela de configura
 
 ![image](https://user-images.githubusercontent.com/56172744/150885190-313e106a-7574-4869-8db3-7faf291de8f3.png)
 
-Aqui está o nosso dispositivo, como definimos 2 propriedades para ele na classe ExemploDevice (um boolean e um integer), elas apareceram aqui como objetos clicaveis/inseriveis:
+Aqui está o nosso dispositivo, como definimos 2 propriedades para ele via construtor na classe ExemploDevice (um boolean e um integer), temos na tela do dispositivo 2 botões, um clicavel(boolean) e um inserivel(integer):
 
 ![image](https://user-images.githubusercontent.com/56172744/150885527-77cc0dc4-632c-44d2-baec-db8a011a05d2.png)
 
