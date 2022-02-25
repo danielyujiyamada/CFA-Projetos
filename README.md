@@ -17,7 +17,6 @@ Para isso, ao longo de toda a progressão, o projeto foi se dividindo em focos d
 # Resultado
 
   A integração dos dispositivos no gateway foi alcançada, porém sem a integração da câmera. As mensagens também funcionaram com êxito, sendo possível mandar mensagens não só por e-mail, mas também por mensagens no telegram.
-
-![image](https://user-images.githubusercontent.com/91295989/155627179-63e181c2-b07d-47fe-8350-519cfa2dc31f.png)
-
+  
 ![20220224_204911](https://user-images.githubusercontent.com/91295989/155627786-b6931c75-f41c-472e-a3d9-14d3a36c8858.jpg)
+![image](https://user-images.githubusercontent.com/91295989/155627179-63e181c2-b07d-47fe-8350-519cfa2dc31f.png)
