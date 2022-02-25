@@ -20,3 +20,5 @@ Para isso, ao longo de toda a progressão, o projeto foi se dividindo em focos d
   
 ![20220224_204911](https://user-images.githubusercontent.com/91295989/155627786-b6931c75-f41c-472e-a3d9-14d3a36c8858.jpg)
 ![image](https://user-images.githubusercontent.com/91295989/155627179-63e181c2-b07d-47fe-8350-519cfa2dc31f.png)
+![Mensagem](https://user-images.githubusercontent.com/91295989/155639013-21f70575-1b1d-4fc3-a240-f7df4a1aefa8.png)
+![MensagemTelegram](https://user-images.githubusercontent.com/91295989/155639009-23b8ebe0-1700-47c2-a199-a1ea019b3577.png)
